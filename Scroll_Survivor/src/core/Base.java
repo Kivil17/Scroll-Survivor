@@ -34,4 +34,10 @@ public class Base implements StaticObject
 		return false;
 	}
 
+	@Override
+	public String toString() {
+		return "Base [x=" + x + ", y=" + y + "]";
+	}
+
+	
 }
