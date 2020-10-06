@@ -20,7 +20,7 @@ public class GameMenager extends JFrame
 	
 	private static final long serialVersionUID = 1L;
 	
-	
+	private int infoGame;
 
 	private static World world;
 	
@@ -126,6 +126,12 @@ public class GameMenager extends JFrame
 		
 	}
 
+	
+	public void printInfoGame()
+	{
+		System.out.println(infoGame);
+	}
+	
 	public void GeneraRigaBase()
 	{
 		Random random=new Random();
@@ -166,7 +172,8 @@ public class GameMenager extends JFrame
 	public void ScendiMatrice()
 	{
 		Entity [][]A= world.getMatrix();
-		
+		infoGame++;
+		printInfoGame();
 		
 		for(int i=9; i>=0; i--)
 		{
