@@ -9,6 +9,8 @@ public class Coin implements StaticObject
 	
 	private int y;
 	
+	private String value; 
+	
 	@Override
 	public int getX() {
 		return x;
@@ -27,6 +29,22 @@ public class Coin implements StaticObject
 	@Override
 	public void setY(int y) {
 		this.y=y;
+	}
+
+	
+	
+	/**
+	 * @return the value
+	 */
+	public String getValue() {
+		return value;
+	}
+
+	/**
+	 * @param value the value to set
+	 */
+	public void setValue(String value) {
+		this.value = value;
 	}
 
 	@Override
