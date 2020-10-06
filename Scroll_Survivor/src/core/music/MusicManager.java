@@ -22,7 +22,7 @@ public class MusicManager {
 	Clip loop_clip;
 	File loop_music;
 	AudioInputStream loop_stream;
-	
+	public static boolean audio_attivo=false;
 	
 	public static boolean stoppato=false;
 	
@@ -40,6 +40,20 @@ public class MusicManager {
 		loop_clip.open(loop_stream);
 	    
 	}
+	/**
+	 * @return the audio_attivo
+	 */
+	public boolean isAudio_attivo() {
+		return audio_attivo;
+	}
+
+	/**
+	 * @param audio_attivo the audio_attivo to set
+	 */
+	public void setAudio_attivo(boolean audio_attivo) {
+		this.audio_attivo = audio_attivo;
+	}
+
 	public void playMusic()
 	{
 
@@ -47,7 +61,7 @@ public class MusicManager {
 			loop_clip.start();
 			loop_clip.loop(Clip.LOOP_CONTINUOUSLY);
 			//System.out.println("AVVIATO");
-	
+			audio_attivo=true;
 		
 		
 	}
@@ -55,7 +69,7 @@ public class MusicManager {
 	{
 			stoppato=true;
 			loop_clip.stop();
-			
+			audio_attivo=false;
 			//System.out.println("STOPPATO");
 		
 		

@@ -12,6 +12,7 @@ import core.Player;
 import core.World;
 import core.interfaces.Direction;
 import core.interfaces.Entity;
+import core.music.MusicManager;
 
 
 public class GameMenager extends JFrame
@@ -130,6 +131,7 @@ public class GameMenager extends JFrame
 	public void printInfoGame()
 	{
 		System.out.println(infoGame);
+		System.out.println(MusicManager.audio_attivo);
 	}
 	
 	public void GeneraRigaBase()
